@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import App from './App';
 import './index.css';
+import { reducer } from './reducers/jokesReducer';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
+
+const rootElement = document.getElementById('root')
 ReactDOM.render(
+  <Provider store={store}>
   <App />,
-  document.getElementById('root')
+  </Provider>,
+  rootElement
+  
 );

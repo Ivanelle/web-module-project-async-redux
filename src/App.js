@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import Joke from './components/Joke';
 
-function App() {
+
+function App(props) {
   return (
     <div className="App">
-      Async Redux Project
+      <h1>Mini Haha Generator</h1>
+      <Joke />
     </div>
   );
 }
