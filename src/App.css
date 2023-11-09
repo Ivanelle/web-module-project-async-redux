@@ -1,5 +1,9 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-content: center;
+  
 }
 
 .App-logo {
@@ -14,8 +18,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  border: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +39,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.App h1 {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(215deg, rgba(0, 0, 0, 0.3), rgba(51, 64, 93, 1) 85%);
+  border-radius: 8px;
+  box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 8px 8px 8px;
+  transition: 0.3s;
+  /* box-sizing: border-box; */
+  padding: 8px;
 }

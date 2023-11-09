@@ -5,8 +5,8 @@ import Joke from './components/Joke';
 
 function App(props) {
   return (
-    <div className="App">
-      <h1>What do you call a little joke ?</h1>
+    <div className="App" >
+      <h1 className='typewriter'>What do you call a little joke generator?</h1>
       <h2>A mini haha..</h2>
       <Joke />
     </div>
