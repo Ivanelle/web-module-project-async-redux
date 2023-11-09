@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getJoke } from '../actions'
 
 const Joke = (props) => {
+const { punchline, showPunchline, setup } = props;
 
   if (props.error) {
     return <h2>{error}</h2>
@@ -13,15 +14,20 @@ const Joke = (props) => {
   }
 
   return (
-    <>
+     <>
       <div>
-      <button onClick={() => props.getJoke()}>Another Mini Haha</button>
+        <h3>{props.joke.setup}</h3>
+      <button onClick={() => props.getJoke()}>🤪Another Mini Haha🤪 </button>
       </div>
-      <button>Punchline!</button>
+      <button>💢Punchline💢</button>
+        <h1>
+          {showPunchline && {punchline}}
+        </h1>
       
-    </>
-  )
-}
+      </>
+    )
+  };
+
 
 const mapStateToProps = state => {
     return {

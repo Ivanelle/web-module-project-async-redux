@@ -9,11 +9,12 @@ export const getJoke = () => dispatch => {
     dispatch(setIsGenerating(true))
     axios.get('https://official-joke-api.appspot.com/random_joke')
         .then((res) => {
+            console.log(res.data.setup)
             const joke = res.data.setup
             dispatch(getJokeSuccess(joke))
             dispatch(setIsGenerating(false));
-        }, (error) ={
-
+        }, (error) => {
+            
         })
 
     return {type: GET_JOKE, payload: {data: 'hello'}}
