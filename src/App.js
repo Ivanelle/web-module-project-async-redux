@@ -6,7 +6,8 @@ import Joke from './components/Joke';
 function App(props) {
   return (
     <div className="App">
-      <h1>Mini Haha Generator</h1>
+      <h1>What do you call a little joke ?</h1>
+      <h2>A mini haha..</h2>
       <Joke />
     </div>
   );
